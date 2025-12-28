@@ -1,0 +1,19 @@
+{
+  "name": "pengiriman-paket",
+  "version": "1.0.0",
+  "description": "Aplikasi web untuk konfirmasi data pengiriman paket dengan fitur geolokasi dan integrasi WhatsApp",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "geolocation",
+    "whatsapp",
+    "delivery",
+    "package"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengiriman Paket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📍 Pengiriman Paket</h1>
+            <p class="subtitle">Konfirmasi data pengiriman paket Anda</p>
+            
+            <div class="button-container">
+                <button id="getLocationBtn" class="btn-primary">Dapatkan Posisi Saya</button>
+            </div>
+            
+            <div id="status" class="status"></div>
+            
+            <!-- WhatsApp Section -->
+            <div class="whatsapp-section">
+                <h2>💬 Masukkan Nomor Handphone</h2>
+                <div class="phone-input-container">
+                    <input 
+                        type="text" 
+                        id="phoneNumber" 
+                        class="phone-input" 
+                        placeholder="Masukkan nomor handphone (contoh: 6281234567890)"
+                        required
+                        maxlength="15"
+                    >
+                    <input 
+                        type="text" 
+                        id="couponCode" 
+                        class="phone-input" 
+                        placeholder="Masukkan kode voucher (opsional)"
+                        maxlength="50"
+                    >
+                    <button id="openWhatsAppBtn" class="btn-whatsapp">
+                        <span>📱</span> Buka WhatsApp
+                    </button>
+                </div>
+                <p class="phone-hint">Format: 62xxxxxxxxxxx (tanpa + dan spasi) - Wajib diisi</p>
+                <p class="phone-hint" style="margin-top: 5px; color: #25D366; font-weight: 500;">
+                    💡 Pesan akan dikirim ke 6285760820750 dengan lokasi dan nomor handphone
+                </p>
+            </div>
+            
+            <div id="locationInfo" class="location-info hidden">
+                <div class="info-section">
+                    <h2>Koordinat</h2>
+                    <div class="info-item">
+                        <span class="label">Latitude:</span>
+                        <span id="latitude" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Longitude:</span>
+                        <span id="longitude" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Akurasi:</span>
+                        <span id="accuracy" class="value">-</span>
+                    </div>
+                </div>
+                
+                <div class="map-section">
+                    <h2>Peta Lokasi</h2>
+                    <div id="map" class="map-container"></div>
+                </div>
+                
+                <div class="actions">
+                    <button id="openMapsBtn" class="btn-secondary">Buka di Google Maps</button>
+                    <button id="copyCoordsBtn" class="btn-secondary">Salin Koordinat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <!-- Opsional: Uncomment dan ganti YOUR_API_KEY dengan Google Maps API key Anda untuk menampilkan peta -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> -->
+</body>
+</html>
+
